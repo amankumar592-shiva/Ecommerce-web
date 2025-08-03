@@ -1,0 +1,62 @@
+
+.navbar .nav-item.dropdown-left .dropdown-menu {
+
+  transform: translateX(-50%) !important; 
+  top: 100%;
+  
+}
+
+/* .navbar .dropdown-menu .dropdown-item {
+  font-size: 14px;
+  padding: 8px 12px;
+} */
+
+
+.about-menu-wrapper {
+  position: relative;
+}
+
+.jealous-msg {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  font-size: 0.9rem;
+  background: #fff8dc;
+  color: #ff7f50;
+  padding: 6px 12px;
+  border: 1px dashed #ffb347;
+  border-radius: 8px;
+  font-weight: 500;
+  animation: fadeInUp 0.4s ease-in;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 10;
+}
+
+.wave-emoji {
+  display: inline-block;
+  animation: waveMotion 0.8s infinite alternate;
+}
+
+/* Fade + bounce in */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Hand emoji waving */
+@keyframes waveMotion {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}

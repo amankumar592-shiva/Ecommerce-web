@@ -1,0 +1,112 @@
+/* Sidebar Base Styles */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #131921;
+  color: white;
+  padding: 20px 0;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+/* Mobile Styles */
+@media (max-width: 767px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .sidebar.closed {
+    transform: translateX(-100%);
+  }
+  
+  .hamburger-btn {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    background: #131921;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 4px;
+    z-index: 999;
+    cursor: pointer;
+  }
+  
+  .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .hamburger-btn {
+    display: none;
+  }
+  
+  .sidebar-overlay {
+    display: none;
+  }
+}
+
+/* Common Styles */
+.sidebar-header {
+  font-size: 1.5rem;
+  padding: 0 20px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  white-space: nowrap;
+}
+
+.sidebar-menu {
+  margin-top: 20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+}
+
+.menu-item:hover, .menu-item.active {
+  background-color: #ffd814;
+  color: #000;
+}
+
+.menu-item .icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Main content adjustment */
+.main-content {
+  margin-left: 250px;
+  transition: margin 0.3s ease;
+}
+
+@media (max-width: 767px) {
+  .main-content {
+    margin-left: 0;
+  }
+  
+  .sidebar.open + .main-content {
+    margin-left: 0;
+  }
+}

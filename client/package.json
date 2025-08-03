@@ -1,0 +1,42 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "private": true,
+  "proxy": "http://localhost:5040/",
+  "scripts": {
+    "start": "react-scripts start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "antd": "^5.26.3",
+    "axios": "^1.10.0",
+    "bootstrap": "^5.3.7",
+    "braintree-web-drop-in": "^1.45.1",
+    "helmet": "^8.1.0",
+    "jquery": "^3.7.1",
+    "moment": "^2.30.1",
+    "package": "^1.0.1",
+    "react": "^19.1.0",
+    "react-helmet": "^6.1.0",
+    "react-hot-toast": "^2.5.2",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.6.3",
+    "react-scripts": "^5.0.1",
+    "react-toastify": "^11.0.5"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
